@@ -8,5 +8,34 @@
 # 5 - Uma lista contendo apenas os múltiplos de 3 ou 4 da lista original.
 # Resolva o problema utilizando a estrutura de repetição while.
 
-numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numeros = [11, 12, 3, 41, 15, 6, 17, 8, 91, 10]
 
+pares = []
+impares = []
+multiplos_de_3 = []
+multiplos_de_3_e_4 = []
+multiplos_de_3_ou_4 = []
+
+contador = 0
+while contador < len(numeros):
+    if numeros[contador] % 2 == 0:
+        pares.append(numeros[contador])
+    else:
+        impares.append(numeros[contador])
+    
+    if numeros[contador] % 3 == 0:
+        multiplos_de_3.append(numeros[contador])
+
+    if numeros[contador] % 3 == 0 and numeros[contador] % 4 == 0:
+        multiplos_de_3_e_4.append(numeros[contador])
+
+    if numeros[contador] % 3 == 0 or numeros[contador] % 4 == 0:
+        multiplos_de_3_ou_4.append(numeros[contador])
+    
+    contador += 1
+
+print(f"Números pares: {pares}")
+print(f"Números ímpares: {impares}")
+print(f"números múltiplos de 3: {multiplos_de_3}")
+print(f"números múltiplos de 3 e 4: {multiplos_de_3_e_4}")
+print(f"números múltiplos de 3 ou 4: {multiplos_de_3_ou_4}")
